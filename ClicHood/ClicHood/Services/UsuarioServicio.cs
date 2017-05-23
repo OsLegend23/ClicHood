@@ -16,7 +16,7 @@ namespace ClicHood.Services
         public UsuarioServicio()
         {
             _client = new HttpClient();
-            _client.BaseAddress = new Uri("http://localhost");
+            _client.BaseAddress = new Uri("http://alejandro-aguilar.com");
         }
 
         public async Task<HttpResponseMessage> Ingreso(string email, string password)
