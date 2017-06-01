@@ -10,18 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace ClicHood.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage : TabbedPage
+    public partial class TabPanelPageTab1 : ContentPage
     {
-        public HomePage()
+        public TabPanelPageTab1()
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
-            NavigationPage.SetHasBackButton(this, false);
-        }
-
-        private void Logout_Clicked(object sender, EventArgs e)
-        {
-
         }
     }
 }

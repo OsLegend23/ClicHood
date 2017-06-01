@@ -4,8 +4,7 @@
              x:Class="ClicHood.Views.LoginPage"
              Title="Acceso"
              x:Name="LoginPage"
-             Icon="ic_action_users.png"
-             BackgroundColor="White">
+             Icon="ic_action_users.png">
 
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness"
@@ -29,7 +28,6 @@
 
                 <ActivityIndicator x:Name="loading"
                                    IsRunning="False"
-                                   IsVisible="False"
                                    HorizontalOptions="CenterAndExpand"/>
 
                 <StackLayout x:Uid="frmAcceso" 
@@ -54,7 +52,7 @@
                 <StackLayout x:Uid="ctrlAcceso">
                     <Button x:Name="btnAcceso"
                             Text="Accesar"                        
-                            BackgroundColor="#2196f3"
+                            BackgroundColor="#689F38"
                             HorizontalOptions="CenterAndExpand"
                             WidthRequest="200"
                             Clicked="btnAcceso_Clicked"/>

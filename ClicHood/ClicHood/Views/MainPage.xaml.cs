@@ -25,7 +25,9 @@ namespace ClicHood.Views
 
         private async void btnRegistro_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new RegistroPage());
+            var registroPage = new RegistroPage();
+            NavigationPage.SetHasNavigationBar(registroPage, false);
+            await Navigation.PushAsync(registroPage);
         }
     }
 }

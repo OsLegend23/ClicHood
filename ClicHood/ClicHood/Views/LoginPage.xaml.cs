@@ -31,13 +31,11 @@ namespace ClicHood.Views
             if (!string.IsNullOrEmpty(email.Text) && !string.IsNullOrEmpty(password.Text))
             {
                 loading.IsRunning = true;
-                loading.IsVisible = true;
 
                 var response = await _servicio.Ingreso(email.Text, password.Text);
                 _response = JsonConvert.DeserializeObject<Respuesta>(response.Content.ReadAsStringAsync().Result);
 
                 loading.IsRunning = false;
-                loading.IsVisible = false;
 
                 if (_response.codeResponse == 200)
                 {

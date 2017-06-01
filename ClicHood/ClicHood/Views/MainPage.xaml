@@ -42,7 +42,7 @@
 
                         <Button x:Name="btnAcceso"
                                 Text="Acceder"
-                                BackgroundColor="#2196f3"
+                                BackgroundColor="#689F38"
                                 Clicked="btnAcceso_Clicked"/>
 
                     </StackLayout>
@@ -51,7 +51,7 @@
                              HorizontalOptions="FillAndExpand">
                         <Button x:Name="btnRegistro"
                                 Text="Registro"
-                                BackgroundColor="#2196f3"
+                                BackgroundColor="#689F38"
                                 Clicked="btnRegistro_Clicked"/>
                     </StackLayout>
 

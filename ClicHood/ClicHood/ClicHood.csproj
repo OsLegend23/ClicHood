@@ -38,7 +38,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Proveedores.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Services\ProveedorServicio.cs" />
     <Compile Include="Services\UsuarioServicio.cs" />
     <Compile Include="ViewModels\UsuarioViewModel.cs" />
     <Compile Include="Views\HomePage.xaml.cs">
@@ -51,8 +53,20 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\NotificacionesPage.xaml.cs">
+      <DependentUpon>NotificacionesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OpcionesPage.xaml.cs">
+      <DependentUpon>OpcionesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OportunidadesPage.xaml.cs">
+      <DependentUpon>OportunidadesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RegistroPage.xaml.cs">
       <DependentUpon>RegistroPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TabPanelPageTab1.xaml.cs">
+      <DependentUpon>TabPanelPageTab1.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +132,30 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\OportunidadesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\NotificacionesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\OpcionesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\TabPanelPageTab1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
