@@ -29,7 +29,8 @@ namespace ClicHood.Views
             if (e.SelectedItem == null)
                 return;
 
-            await DisplayAlert("Selected", e.SelectedItem.ToString(), "OK");
+            //await DisplayAlert("Selected", e.SelectedItem.ToString(), "OK");
+            await Navigation.PushModalAsync(new DetalleProveedorPage());
 
             //Deselect Item
             ((ListView)sender).SelectedItem = null;
