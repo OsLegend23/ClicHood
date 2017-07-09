@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace ClicHood.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DetalleProveedorPage : CarouselPage
+    public partial class DetalleProveedorPage : ContentPage
     {
         public DetalleProveedorPage()
         {
