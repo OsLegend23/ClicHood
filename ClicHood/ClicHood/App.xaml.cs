@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClicHood.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,9 @@ namespace ClicHood
         {
             InitializeComponent();
 
-            MainPage = new ClicHood.MainPage();
+            var page = new MainPage();
+            NavigationPage.SetHasNavigationBar(page, false);
+            MainPage = new NavigationPage(page);            
         }
 
         protected override void OnStart()

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClicHood.Views.RegistroPage"
+             Title="Registro">
+    
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="20, 40, 20, 20"
+                    Android="20, 20, 20, 20"
+                    WinPhone="20, 20, 20, 20" />
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                
+                <StackLayout x:Uid="Logo"
+                             HorizontalOptions="CenterAndExpand"
+                             Orientation="Vertical">
+                    <Image Source="logo"
+                           WidthRequest="256"
+                           HeightRequest="256"/>                
+                </StackLayout>
+                <ActivityIndicator x:Name="loading"
+                                   HorizontalOptions="CenterAndExpand"
+                                   IsRunning="False"/>
+                
+                <StackLayout x:Uid="frmAcceso" Orientation="Vertical"
+                             HorizontalOptions="CenterAndExpand"
+                             WidthRequest="300">
+                    <Label Text="Nombre:"
+                           TextColor="Black"
+                           FontSize="16"
+                           HorizontalOptions="StartAndExpand"/>
+                    <Entry x:Name="nombre" />
+
+                    <Label Text="Apellidos:"
+                           TextColor="Black"
+                           FontSize="16"
+                           HorizontalOptions="StartAndExpand"/>
+                    <Entry x:Name="apellidos" />
+
+                    <Label Text="Correo Electrónico:"
+                           TextColor="Black"
+                           FontSize="16"
+                           HorizontalOptions="StartAndExpand"/>
+                    <Entry x:Name="email" />
+
+                    <Label Text="Contraseña:"
+                           TextColor="Black"
+                           FontSize="16"
+                           HorizontalOptions="StartAndExpand"/>
+                    <Entry x:Name="password"
+                           IsPassword="True"/>
+
+                </StackLayout>
+
+                <StackLayout>
+                    <Button x:Name="btnRegistro"
+                            Text="Registrarse"                        
+                            BackgroundColor="#689F38"
+                            HorizontalOptions="CenterAndExpand"
+                            WidthRequest="200"
+                            Clicked="btnRegistro_Clicked"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
