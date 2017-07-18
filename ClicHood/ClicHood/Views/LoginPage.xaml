@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClicHood.Views.LoginPage"
+             Title="Acceso"
+             x:Name="LoginPage"
+             Icon="ic_action_users.png">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="20, 40, 20, 20"
+                    Android="20, 20, 20, 20"
+                    WinPhone="20, 20, 20, 20" />
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout Spacing="10">
+
+                <StackLayout x:Uid="Logo"
+                             HorizontalOptions="CenterAndExpand"
+                             Orientation="Vertical">
+                    <Image Source="logo"
+                           WidthRequest="252"
+                           HeightRequest="252"/>
+                </StackLayout>
+
+                <ActivityIndicator x:Name="loading"
+                                   IsRunning="False"
+                                   HorizontalOptions="CenterAndExpand"/>
+
+                <StackLayout x:Uid="frmAcceso" 
+                             Orientation="Vertical"
+                             HorizontalOptions="CenterAndExpand"
+                             WidthRequest="250">
+                    <Label Text="Email:"
+                           TextColor="Black"
+                           FontSize="16"
+                           HorizontalOptions="StartAndExpand"/>
+                    <Entry x:Name="email"/>
+
+                    <Label Text="Contraseña:"
+                           TextColor="Black"
+                           FontSize="16"
+                           HorizontalOptions="StartAndExpand"/>
+                    <Entry x:Name="password"
+                           IsPassword="True" />
+
+                </StackLayout>
+
+                <StackLayout x:Uid="ctrlAcceso">
+                    <Button x:Name="btnAcceso"
+                            Text="Accesar"                        
+                            BackgroundColor="#689F38"
+                            HorizontalOptions="CenterAndExpand"
+                            WidthRequest="200"
+                            Clicked="btnAcceso_Clicked"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

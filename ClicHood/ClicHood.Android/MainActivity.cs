@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using ImageCircle.Forms.Plugin.Droid;
+using CarouselView.FormsPlugin.Android;
 
 namespace ClicHood.Droid
 {
@@ -20,6 +22,8 @@ namespace ClicHood.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            ImageCircleRenderer.Init();
+            CarouselViewRenderer.Init();
             LoadApplication(new App());
         }
     }
