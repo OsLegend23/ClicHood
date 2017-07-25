@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ClicHood"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              x:Class="ClicHood.Views.MainPage"
              xmlns:ViewModels="clr-namespace:ClicHood.ViewModels"
              BackgroundColor="White">
@@ -19,7 +20,7 @@
 
     <ContentPage.Content>
         <RelativeLayout>
-            
+
             <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
                 <Image Source="logo"
@@ -28,6 +29,32 @@
                        WidthRequest="256"
                        HeightRequest="256"/>
             </Grid>
+
+            <controls:ImageButton x:Name="btnFacebook"
+                                      Text="Facebook"
+                                      BackgroundColor="#3b5998"
+                                      HeightRequest="75"
+                                      ImageHeightRequest="50"
+                                      ImageWidthRequest="50"
+                                      Orientation="ImageToRight"
+                                      TextColor="#ffffff"
+                                      WidthRequest="175">
+                <controls:ImageButton.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <OnPlatform.iOS>
+                            <FileImageSource File="facebook.png" />
+                        </OnPlatform.iOS>
+                        <OnPlatform.Android>
+                            <FileImageSource File="facebook.png" />
+                        </OnPlatform.Android>
+                        <OnPlatform.WinPhone>
+                            <FileImageSource File="Images/facebook.png" />
+                        </OnPlatform.WinPhone>
+                    </OnPlatform>
+                </controls:ImageButton.Source>
+
+            </controls:ImageButton>
+
 
             <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
                       RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">

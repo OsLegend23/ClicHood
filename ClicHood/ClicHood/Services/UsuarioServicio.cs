@@ -15,32 +15,37 @@ namespace ClicHood.Services
 
         public UsuarioServicio()
         {
-            _client = new HttpClient();
-            _client.BaseAddress = new Uri("http://alejandro-aguilar.com");
+            _client = new HttpClient
+            {
+                BaseAddress = new Uri("http://alejandro-aguilar.com")
+            };
         }
 
         public async Task<HttpResponseMessage> Ingreso(string email, string password)
         {
-            Usuario vendedor = new Usuario();
-            vendedor.Email = email;
-            vendedor.Password = password;
+            var vendedor = new Usuario
+            {
+                Email = email,
+                Password = password
+            };
             var json = JsonConvert.SerializeObject(vendedor);
 
             HttpContent content = new StringContent(json);
             
-            string url = string.Format("/Servicios/ClicHood/Acceso/ingreso");
+            var url = string.Format("/Servicios/ClicHood/Acceso/ingreso");
             var response = await _client.PostAsync(url, content);
 
             return response;
         }
 
-        public Usuario ObtenerUsusario()
+        public static Usuario ObtenerUsusario()
         {
-            Usuario vendedor = new Usuario();
-
-            vendedor.Nombre = "Alejandro";
-            vendedor.Apellidos = "Aguilar";
-            vendedor.Email = "kainraziellok@gmail.com";
+            var vendedor = new Usuario
+            {
+                Nombre = "Alejandro",
+                Apellidos = "Aguilar",
+                Email = "kainraziellok@gmail.com"
+            };
 
             return vendedor;
         }
@@ -49,7 +54,7 @@ namespace ClicHood.Services
         {
             var json = JsonConvert.SerializeObject(vendedor);
             HttpContent content = new StringContent(json);
-            string url = string.Format("/Servicios/ClicHood/vendedores");
+            var url = string.Format("/Servicios/ClicHood/vendedores");
             var response = await _client.PostAsync(url, content);
 
             return response;

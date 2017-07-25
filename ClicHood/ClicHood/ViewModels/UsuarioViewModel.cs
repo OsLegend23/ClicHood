@@ -27,7 +27,7 @@ namespace ClicHood.ViewModels
         {
             UsuarioServicio servicio = new UsuarioServicio();
 
-            Vendedor = servicio.ObtenerUsusario();
+            Vendedor = UsuarioServicio.ObtenerUsusario();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
