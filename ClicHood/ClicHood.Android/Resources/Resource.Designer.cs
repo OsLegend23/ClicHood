@@ -5629,8 +5629,11 @@ namespace ClicHood.Droid
 			// aapt resource value: 0x7f0200a8
 			public const int mr_ic_play_light = 2130837672;
 			
+			// aapt resource value: 0x7f0200aa
+			public const int notification_template_icon_bg = 2130837674;
+			
 			// aapt resource value: 0x7f0200a9
-			public const int notification_template_icon_bg = 2130837673;
+			public const int screen = 2130837673;
 			
 			static Drawable()
 			{
@@ -7383,6 +7386,9 @@ namespace ClicHood.Droid
 			
 			// aapt resource value: 0x7f0a0176
 			public const int Theme_PageIndicatorDefaults = 2131362166;
+			
+			// aapt resource value: 0x7f0a017c
+			public const int Theme_Splash = 2131362172;
 			
 			// aapt resource value: 0x7f0a010e
 			public const int ThemeOverlay_AppCompat = 2131362062;

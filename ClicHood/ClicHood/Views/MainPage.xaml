@@ -5,18 +5,18 @@
              xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              x:Class="ClicHood.Views.MainPage"
              xmlns:ViewModels="clr-namespace:ClicHood.ViewModels"
-             BackgroundColor="White">
+             BackgroundColor="#FDFEFC">
 
     <ContentPage.BindingContext>
         <ViewModels:UsuarioViewModel/>
     </ContentPage.BindingContext>
 
-    <ContentPage.Padding>
+    <!--<ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness"
                     iOS="20, 40, 20, 20"
                     Android="20, 20, 20, 20"
                     WinPhone="20, 20, 20, 20" />
-    </ContentPage.Padding>
+    </ContentPage.Padding>-->
 
     <ContentPage.Content>
         <RelativeLayout>
@@ -30,39 +30,39 @@
                        HeightRequest="256"/>
             </Grid>
 
-            <controls:ImageButton x:Name="btnFacebook"
-                                      Text="Facebook"
-                                      BackgroundColor="#3b5998"
-                                      HeightRequest="75"
-                                      ImageHeightRequest="50"
-                                      ImageWidthRequest="50"
-                                      Orientation="ImageToRight"
-                                      TextColor="#ffffff"
-                                      WidthRequest="175">
-                <controls:ImageButton.Source>
-                    <OnPlatform x:TypeArguments="ImageSource">
-                        <OnPlatform.iOS>
-                            <FileImageSource File="facebook.png" />
-                        </OnPlatform.iOS>
-                        <OnPlatform.Android>
-                            <FileImageSource File="facebook.png" />
-                        </OnPlatform.Android>
-                        <OnPlatform.WinPhone>
-                            <FileImageSource File="Images/facebook.png" />
-                        </OnPlatform.WinPhone>
-                    </OnPlatform>
-                </controls:ImageButton.Source>
-
-            </controls:ImageButton>
-
-
             <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
                       RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
 
-                <StackLayout Orientation="Horizontal"
+                <StackLayout Orientation="Vertical"
                              HorizontalOptions="FillAndExpand"
                              VerticalOptions="EndAndExpand"
                              Padding="10, 0, 10, 50">
+
+                    <Button x:Name="FacebookButton"
+                            BackgroundColor="#3b5998"
+                            Image="facebook"
+                            Text="Facebook"
+                            TextColor="White" />
+
+                    <controls:ImageButton x:Name="btnFacebook"
+                                      Text="Facebook"
+                                      BackgroundColor="#3b5998"
+                                      TextColor="#ffffff">
+                        <controls:ImageButton.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <OnPlatform.iOS>
+                                    <FileImageSource File="facebook.png" />
+                                </OnPlatform.iOS>
+                                <OnPlatform.Android>
+                                    <FileImageSource File="facebook.png" />
+                                </OnPlatform.Android>
+                                <OnPlatform.WinPhone>
+                                    <FileImageSource File="Images/facebook.png" />
+                                </OnPlatform.WinPhone>
+                            </OnPlatform>
+                        </controls:ImageButton.Source>
+
+                    </controls:ImageButton>
 
                     <StackLayout Orientation="Vertical"
                                  HorizontalOptions="FillAndExpand">

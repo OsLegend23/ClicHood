@@ -41,6 +41,7 @@
     <Compile Include="Helpers\CircleImage.cs" />
     <Compile Include="Models\Proveedores.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Services\FacebookServicio.cs" />
     <Compile Include="Services\ProveedorServicio.cs" />
     <Compile Include="Services\UsuarioServicio.cs" />
     <Compile Include="ViewModels\UsuarioViewModel.cs" />

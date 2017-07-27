@@ -21,11 +21,11 @@ namespace ClicHood.Views
         {
             InitializeComponent();
             //BindingContext = new OportunidadesPageViewModel();
-            ObservableCollection<Proveedores> proveedores = new ObservableCollection<Proveedores>(new ProveedorServicio().ConsultaProveedores());
+            var proveedores = new ObservableCollection<Proveedores>(ProveedorServicio.ConsultaProveedores());
             ltProveedores.ItemsSource = proveedores;
         }
 
-        void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        static void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
             => ((ListView)sender).SelectedItem = null;
 
         async void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
